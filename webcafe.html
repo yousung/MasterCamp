@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- <!DOCTYPE html> 매우 중요.. -->
+<html lang="ko-KR">
+<!-- 접근성 언어 제공.. 한국어-대한민국 ko-KR -->
+<head>
+  <meta charset="UTF-8">
+  <!-- 
+      title 밑에 charset이 들어가면 안됨. 
+      charset은 head 바로 밑에 넣는 것을 권장
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 반응형 옵션 -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- 
+    X 가 붙어있으면 비표준 
+    content 으로 ie 버전 강제화 가능 ie=edge 최신 버전
+    ie=10 으로 하면 10으로 렌더링
+
+    edge 권장 없어도 됨.
+  -->
+  <title>웹카페</title>
+
+  <link rel="stylesheet" href="css/webcafe.css">
+  <!-- title 은 유니크로 핵심 요소 표현 -->
+</head>
+<body>
+    <!-- 
+        main 은 한번만 사용 가능
+        aside 은 없어도 본문에 내용이 없어도 되는 내용을 넣어야 함.
+        header는 여러번 쓸수 있음.
+        독립적인 내용 article, section 사용
+        article 이것만 가지고 배포해도 되는 내용
+     -->
+
+     <div class="wrapper">
+        <header class="header">
+
+          <h1 class="logo">
+            <a href="#">
+              <img src="images/rwd-logo.png" alt="Web Cafe">
+              <!-- alt를 입력하면 이미지를 heading 역할 가능 -->
+            </a>
+          </h1>
+
+          <h1>Heading</h1>
+
+          <!-- 
+            normal flow 작업일 경우에는 마진겹침 현상 조심
+
+            최근에는 reset.css 를 사용을 줄이는 추세
+            normalize.css 권장
+           -->
+
+          <ul class="member">
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">커뮤니티</a></li>
+          </ul>
+          <!-- 원래 시멘틱이 없는 경우에만 role 을 사용하면 안된다. -->
+          <!-- webcafe-aria.html 참고 -->
+
+<!-- 
+            2019. 07. 20
+            * 구조 설계
+            1. 논리적인 순서
+            2. 시멘틱 마크업 
+            3. naming 중요
+
+            * 구조도
+            1. 연습 많이 할것.
+-->
+          <form action="https://formspree.io/nug22kr@gmail.com" class="search-form" method="POST">
+            <fieldset>
+                <legend>검색 폼</legend>
+                <label for="search">검색어</label>
+                <!-- required 필수항목 체크 -->
+                <!-- placeholder 입력 힌트 -->
+                <!-- search : text 와 비슷하나 줄바꿈을하지 않음 -->
+                <input type="search" id="search" required name="keyword" placeholder="검색어를 입력하세요">
+                <button class="btn-search" type="submit">검색</button>
+            </fieldset>
+          </form>
+        </header>
+        
+        <nav class="navigation">내비게이션</nav>
+        <main class="main">메인</main>
+        <article class="slogan">슬로건</article>
+        <div class="footer-bg">
+          <footer class="footer">푸터</footer>
+        </div>
+     </div>
+     
+</body>
+</html>

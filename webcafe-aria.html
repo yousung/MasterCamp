@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- <!DOCTYPE html> 매우 중요.. -->
+<html lang="ko-KR">
+<!-- 접근성 언어 제공.. 한국어-대한민국 ko-KR -->
+<head>
+  <meta charset="UTF-8">
+  <!-- 
+      title 밑에 charset이 들어가면 안됨. 
+      charset은 head 바로 밑에 넣는 것을 권장
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 반응형 옵션 -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- 
+    X 가 붙어있으면 비표준 
+    content 으로 ie 버전 강제화 가능 ie=edge 최신 버전
+    ie=10 으로 하면 10으로 렌더링
+
+    edge 권장 없어도 됨.
+  -->
+  <title>웹카페</title>
+  <!-- title 은 유니크로 핵심 요소 표현 -->
+</head>
+<body>
+    <!-- 
+        main 은 한번만 사용 가능
+        aside 은 없어도 본문에 내용이 없어도 되는 내용을 넣어야 함.
+        header는 여러번 쓸수 있음.
+        독립적인 내용 article, section 사용
+        article 이것만 가지고 배포해도 되는 내용
+     -->
+
+     <div class="wrapper">
+       <!-- role banner는 머릿말 역할 -->
+        <div class="header" role="banner">헤더</div>
+        <div class="navigation" role="navigation">내비게이션</div>
+        <div class="main" role="main">메인</div>
+        <div class="slogan" role="article">슬로건</div>
+        <div class="footer-bg">
+          <div class="footer" role="contentinfo">푸터</div>
+        </div>
+     </div>
+     
+     <!-- 원래 시멘틱이 없는 경우에만 role 을 사용하면 안된다. -->
+</body>
+</html>
