@@ -59,3 +59,48 @@ a:hover, a:focus {
   color: red;
 } */
 
+
+/* 2019. 07. 27. */
+/* 공통 스타일 */
+
+/* 모바일 기준 세로 기준 320 */
+
+
+/* 모바일 스타일 */
+@media screen and (min-width: 320px) and (max-width: 999px) {
+  /* 모바일 헤더 */
+
+  /* 순서를 바꾸고 싶으면 부모에게 display: flex . */
+  .header {
+    background: #38302e;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .logo, .member, .search-form {
+    width: 100%;
+  }
+
+  /* 모바일 멤버 링크 */
+  .member {
+    background: #988574;
+    order: -1;
+  }
+
+
+}
+
+
+/* 데스크탑 스타일 */
+@media screen and (min-width: 1000px) {
+  /* 
+      실습 때문에 1000
+      mobile 320~414 | 568~812
+      table 768~834 | 1024 ~ 1112
+      laptop 1200 +
+  */
+
+
+}
