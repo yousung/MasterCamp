@@ -81,14 +81,36 @@ a:hover, a:focus {
 
   .logo, .member, .search-form {
     width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   /* 모바일 멤버 링크 */
   .member {
     background: #988574;
+    padding-top: .5em;
+    padding-bottom: .5em;
     order: -1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
   }
 
+  /* A tag 를 확장하여 터치하기 유리하도록 설계 */
+  .member a {
+    display: inline-block;
+    padding: 0.5em 1em;
+    margin-right: -1em;
+  }
+
+  .member a:hover, .member a:focus {
+    color: #ff0;
+  }
+
+  /* 모바일 로고 */
+  .vt {
+    vertical-align: top;
+  }
 
 }
 
