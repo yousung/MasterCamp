@@ -248,12 +248,19 @@ legend, .a11y-hidden {
     float : r, l
     display : inline
    */
+  /* 데스크톱 레이아웃 */
+  .header, .menu {
+    width: 1000px;
+    /*  
+      겹칠만한 상황이 있을 가능성이 높은 경우에는 단축표기 법을 자제하면 좋다.
+    */
+    margin-left: auto;
+    margin-right: auto;
+  }
 
    /* 데스크톱 헤더 */
    .header {
      position: relative;
-     width: 1000px;
-     margin: 0 auto;
    }
 
    /* 데스크톱 로고 */
@@ -315,4 +322,50 @@ legend, .a11y-hidden {
     border-radius: 0 15px;
   } */
 
+  /* 데스크톱 네비게이션 */
+  .navigation {
+    background: #988574;
+    /* x축, y축, 블러, 스프라이트, 색상 */
+    /* box-shadow의 경우는 마진겹침 현상 발생가능성이 있음 */
+    /* box-shadow: 0 -2px 5px 0 #000, 0 2px 5px 0 #000; */
+    border-top : 2px solid #181818;
+    border-bottom : 2px solid #181818;
+  }
+
+  /* 데스크톱 메뉴 */
+  .menu {
+    margin-top : 20px;
+    /* margin-bottom : 20px; */
+    /* overflow 에서 기본값 (visible) 만 아니면 자식의 float의 위치를 찾아준다. */
+    /* overflow-y: auto; */
+    
+    color: #fff;
+  }
+
+  .clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .menu-list {
+    float: left;
+  }
+
+  .menu-list:nth-child(n+2) {
+    margin-left: 100px;
+  }
+
+  .menu-item {
+    font-size: 1.8rem;
+    text-shadow: 0 1px 0 #000, 1px 0 0 #000, 0 -1px 0 #000, -1px 0 0 #000;
+  }
+
+  .sub-menu {
+    margin: 1em;
+  }
+
+  .sub-menu li {
+    margin-bottom: 1em;
+  }
 }

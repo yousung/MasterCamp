@@ -9,6 +9,7 @@
 
 <html lang="ko-KR">
 <!-- 접근성 언어 제공.. 한국어-대한민국 ko-KR -->
+
 <head>
   <meta charset="UTF-8">
   <!-- 
@@ -30,8 +31,9 @@
   <link rel="stylesheet" href="css/webcafe.css">
   <!-- title 은 유니크로 핵심 요소 표현 -->
 </head>
+
 <body>
-    <!-- 
+  <!-- 
         main 은 한번만 사용 가능
         aside 은 없어도 본문에 내용이 없어도 되는 내용을 넣어야 함.
         header는 여러번 쓸수 있음.
@@ -39,32 +41,32 @@
         article 이것만 가지고 배포해도 되는 내용
      -->
 
-     <div class="wrapper">
-        <header class="header">
+  <div class="wrapper">
+    <header class="header">
 
-          <h1 class="logo">
-            <a href="#" >
-              <img class="vt" src="images/rwd-logo.png" alt="Web Cafe">
-              <!-- alt를 입력하면 이미지를 heading 역할 가능 -->
-            </a>
-          </h1>
+      <h1 class="logo">
+        <a href="#">
+          <img class="vt" src="images/rwd-logo.png" alt="Web Cafe">
+          <!-- alt를 입력하면 이미지를 heading 역할 가능 -->
+        </a>
+      </h1>
 
-          <!-- 
+      <!-- 
             normal flow 작업일 경우에는 마진겹침 현상 조심
 
             최근에는 reset.css 를 사용을 줄이는 추세
             normalize.css 권장
            -->
 
-          <ul class="member">
-            <li><a href="#">로그인</a></li>
-            <li><span class="bar" aria-hidden="true"></span><a href="#">회원가입</a></li>
-            <li><span class="bar" aria-hidden="true"></span><a href="#">커뮤니티</a></li>
-          </ul>
-          <!-- 원래 시멘틱이 없는 경우에만 role 을 사용하면 안된다. -->
-          <!-- webcafe-aria.html 참고 -->
+      <ul class="member">
+        <li><a href="#">로그인</a></li>
+        <li><span class="bar" aria-hidden="true"></span><a href="#">회원가입</a></li>
+        <li><span class="bar" aria-hidden="true"></span><a href="#">커뮤니티</a></li>
+      </ul>
+      <!-- 원래 시멘틱이 없는 경우에만 role 을 사용하면 안된다. -->
+      <!-- webcafe-aria.html 참고 -->
 
-<!-- 
+      <!-- 
             2019. 07. 20
             * 구조 설계
             1. 논리적인 순서
@@ -74,26 +76,76 @@
             * 구조도
             1. 연습 많이 할것.
 -->
-          <form action="https://formspree.io/nug22kr@gmail.com" class="search-form" method="POST">
-            <fieldset>
-                <legend>검색 폼</legend>
-                <label class="a11y-hidden" for="search">검색어</label>
-                <!-- required 필수항목 체크 -->
-                <!-- placeholder 입력 힌트 -->
-                <!-- search : text 와 비슷하나 줄바꿈을하지 않음 -->
-                <input type="search" id="search" required name="keyword" placeholder="검색어를 입력하세요">
-                <button class="btn-search" type="submit">검색</button>
-            </fieldset>
-          </form>
-        </header>
-        
-        <nav class="navigation">내비게이션</nav>
-        <main class="main">메인</main>
-        <article class="slogan">슬로건</article>
-        <div class="footer-bg">
-          <footer class="footer">푸터</footer>
-        </div>
-     </div>
-     
+      <form action="https://formspree.io/nug22kr@gmail.com" class="search-form" method="POST">
+        <fieldset>
+          <legend>검색 폼</legend>
+          <label class="a11y-hidden" for="search">검색어</label>
+          <!-- required 필수항목 체크 -->
+          <!-- placeholder 입력 힌트 -->
+          <!-- search : text 와 비슷하나 줄바꿈을하지 않음 -->
+          <input type="search" id="search" required name="keyword" placeholder="검색어를 입력하세요">
+          <button class="btn-search" type="submit">검색</button>
+        </fieldset>
+      </form>
+    </header>
+
+    <nav class="navigation">
+      <h2 class="a11y-hidden">메인 메뉴</h2>
+      <ul class="menu clearfix">
+        <li class="menu-list">
+          <span class="menu-item">HTML에 대해</span>
+          <ul class="sub-menu">
+            <li><a href="#">HTML5 소개</a></li>
+            <li><a href="#">레퍼런스 소개</a></li>
+            <li><a href="#">활용 예제</a></li>
+          </ul>
+        </li>
+        <li class="menu-list">
+          <span class="menu-item">CSS에 대해</span>
+          <ul class="sub-menu">
+            <li><a href="#">CSS 소개</a></li>
+            <li><a href="#">CSS2 VS CSS3</a></li>
+            <li><a href="#">CSS 애니메이션</a></li>
+          </ul>
+        </li>
+        <li class="menu-list">
+          <span class="menu-item">웹표준/웹접근성</span>
+          <ul class="sub-menu">
+            <li><a href="#">웹표준 이란?</a></li>
+            <li><a href="#">웹접근성의 개요</a></li>
+            <li><a href="#">HTML5의 현재와 미래</a></li>
+          </ul>
+        </li>
+        <li class="menu-list">
+          <span class="menu-item">묻고 답하기</span>
+          <ul class="sub-menu">
+            <li><a href="#">묻고 답하기</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">1대1 질문</a></li>
+          </ul>
+        </li>
+        <li class="menu-list">
+          <span class="menu-item">자료실</span>
+          <ul class="sub-menu">
+            <li><a href="#">공개 자료실</a></li>
+            <li><a href="#">이미지 자료실</a></li>
+            <li><a href="#">예제 자료실</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+
+    <main class="main">메인</main>
+
+
+    <article class="slogan">슬로건</article>
+
+
+    <div class="footer-bg">
+      <footer class="footer">푸터</footer>
+    </div>
+  </div>
 </body>
+
 </html>
