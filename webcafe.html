@@ -26,6 +26,10 @@
 
     edge 권장 없어도 됨.
   -->
+
+  <script defer src="./js/jquery.min.js"></script>
+  <script defer src="./js/webcafe.js"></script>
+
   <title>웹카페</title>
 
   <link rel="stylesheet" href="css/webcafe.css">
@@ -91,6 +95,15 @@
 
     <nav class="navigation">
       <h2 class="a11y-hidden">메인 메뉴</h2>
+
+      <!-- 19.08.10 menu bar -->
+      <button class="btn-menubar" aria-label="메뉴 열기" title="메뉴 열기">
+        <span class="menubar menubar-top"></span>
+        <span class="menubar menubar-middle"></span>
+        <span class="menubar menubar-bottom"></span>
+      </button>
+
+
       <ul class="menu clearfix">
         <li class="menu-list">
           <span class="menu-item">HTML에 대해</span>
@@ -146,6 +159,7 @@
       <footer class="footer">푸터</footer>
     </div>
   </div>
+
 </body>
 
 </html>

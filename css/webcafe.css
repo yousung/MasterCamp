@@ -11,9 +11,10 @@
 */
 @import url('https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
 
-
 @import url('./normalize.css');
 @import url('./reset.css');
+
+@import url('./fonts.css');
 
 
 /* 
@@ -230,6 +231,110 @@ legend, .a11y-hidden {
       height: 100%;
   }
 
+  /* 모바일 내비게이션 */
+
+  .navigation  {
+    background: blue;
+  }
+
+  /* 모바일 메뉴 제어 버튼 */
+  .btn-menubar {
+    background: transparent;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    padding: 0;
+    position: absolute;
+    top : 7rem;
+    right: 20px;
+    overflow: hidden;
+  }
+
+  .menubar {
+    position: absolute;
+    background: white;
+    width: 100%;
+    height: 26%;
+    display: block;
+    left : 0;
+    transition: all 0.4s;
+    /* transition-property: top, transform;
+    transition-duration: 500ms,500ms;
+    transition-delay: 0s, 500ms; */
+
+    /* transition-property: transform, background, top;
+    transition-duration: 500ms, 1000ms, 500ms;
+    transition-delay: 0s, 500ms, 1000ms;
+    transition-timing-function: ease-in-out; */
+  }
+
+  .menubar-top {
+    top : 0;
+  }
+
+  .is-act .menubar-top {
+    top : 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  .menubar-middle {
+    top : 50%;
+    transform: translateY(-50%);
+  }
+  .is-act .menubar-middle {
+    transform: translate(-100%, -50%);
+  }
+
+  .menubar-bottom {
+    top : 100%;
+    transform: translateY(-100%);
+  }
+  .is-act .menubar-bottom {
+    top : 50%;
+    transform: translateY(-50%) rotate(-45deg);
+  }
+
+
+  /* 모바일 메인 메뉴 */
+  .menu {
+    background: rgba(0, 0, 0, .85);
+    color: #fff;
+    position: fixed;
+    /* fixed 일 경우에는 left로 이동시 성능 이슈가 있음. */
+    top : 0;
+    left: 0;
+    width: 70vw;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: all .2s;
+    transition-timing-function: ease-in-out;
+
+    padding: 1.5em;
+  }
+
+  .is-act .menu {
+    transform: translateX(0);
+  }
+
+  .menu-item {
+    margin: 1em 0;
+    display: block;
+    cursor: pointer;
+  }
+
+  .sub-menu {
+    display: none;
+    margin-left: 3em;
+    list-style: circle;
+  }
+
+  .sub-menu li {
+    margin-bottom: .5em;
+  }
+
+  .menu-act .sub-menu {
+    display: block;
+  }
 }
 
 
@@ -248,7 +353,7 @@ legend, .a11y-hidden {
     float : r, l
     display : inline
    */
-  /* 데스크톱 레이아웃 */
+  /* 일레이아웃 */
   .header, .menu {
     width: 1000px;
     /*  
@@ -332,6 +437,10 @@ legend, .a11y-hidden {
     border-bottom : 2px solid #181818;
   }
 
+  .btn-menubar {
+    display: none;
+  }
+
   /* 데스크톱 메뉴 */
   .menu {
     margin-top : 20px;
@@ -358,6 +467,7 @@ legend, .a11y-hidden {
 
   .menu-item {
     font-size: 1.8rem;
+    font-weight: 700;
     text-shadow: 0 1px 0 #000, 1px 0 0 #000, 0 -1px 0 #000, -1px 0 0 #000;
   }
 
