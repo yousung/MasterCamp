@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>PICTURE 요소의 활용</title>
+  <link rel="stylesheet" href="./css/picture.css">
+</head>
+
+<body>
+  
+  <h1 class="heading">Picture 요소</h1>
+
+  <div class="wrapper">
+    <picture>
+      <source media="(max-width: 767px)" srcset="./images/small.jpg">
+      <source media="(min-width: 768px) and (max-width: 999px)" srcset="./images/medium.jpg">
+      <source media="(min-width: 1000px) " srcset="./images/large.jpg">
+      <img src="./images/normal.jpg" class="response" alt="">
+    </picture>
+  </div>
+
+</body>
+
+</html>

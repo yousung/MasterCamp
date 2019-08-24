@@ -33,6 +33,33 @@
 
   <link rel="stylesheet" href="css/webcafe.css" />
   <!-- title 은 유니크로 핵심 요소 표현 -->
+
+  <style>
+    .news-container {
+      position: relative;
+      height: 0;
+    }
+
+    .ratio16 {
+      padding-top: 56.25%;
+    }
+
+    .ratio4 {
+      padding-top: 75%;
+    }
+
+    .ratio1 {
+      padding-top: 100%;
+    }
+
+    .news-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
 </head>
 
 <body>
@@ -192,12 +219,13 @@
           <span class="en-heading">web cafe news</span>
         </h2>
 
-        <figure class="news-container">
+        <figure class="news-container ratio16">
           <!-- <video class="news-video" poster="./media/poster.jpg" controls autoplay muted> -->
-          <video class="news-video responsive" poster="./media/poster.jpg" controls>
+          <!-- <video class="news-video responsive" poster="./media/poster.jpg" controls>
             <source src="./media/stories.mp4" type="video/mp4">
             <track src="./media/stories-en.vtt" kind="captions" srclang="en" label="English Caption">
-          </video>
+          </video> -->
+          <iframe src="https://www.youtube.com/embed/Ifith-j4IYk" allowfullscreen></iframe>
 
           <figcaption class="a11y-hidden">구글 개발자 이야기</figcaption>
         </figure>

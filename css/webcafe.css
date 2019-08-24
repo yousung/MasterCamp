@@ -89,6 +89,66 @@ legend, .a11y-hidden {
   height: auto;
 }
 
+/* 공통 메인 컨텐츠 섹션 */
+.main-content {
+  margin-top: 1em;
+}
+
+/* 공통 메인 컨텐츠 제목 */
+.main-content-heading {
+  background: url("./images/sprite_main.png") no-repeat;
+  min-height: 60px;
+  font-size: 1.7rem;
+  font-weight: 700;
+  padding-left: 65px;
+  margin: 1em 0 1.5em;;
+}
+
+.en-heading {
+  /* background: orange; */
+  display: block;
+  text-transform: capitalize;
+}
+
+.recommend-book-heading .en-heading {
+  color: #abd375;
+}
+
+.news-heading {
+  background-position: 0 -230px;
+}
+.news-heading .en-heading {
+  color: #e8ca58;
+}
+
+.board-heading {
+  background-position: 0 -115px;
+}
+.board-heading .en-heading {
+  color: #c7b39a;
+}
+
+.favorite-site-heading {
+  background-position: 0 -345px;
+}
+.favorite-site-heading .en-heading {
+  color: #eea60a;
+}
+
+.twitter-heading {
+  background-position: 0 -460px;
+}
+.twitter-heading .en-heading {
+  color: #6aaee6;
+}
+
+/* 공통 메인 컨텐츠 단락 */
+.main [class*="summary"] {
+  /* background: yellow; */
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
 /* 공통 추천 서적 */
 .recommend-book-cover {
   justify-self: center;
@@ -112,7 +172,12 @@ legend, .a11y-hidden {
   color: #abd375;
 }
 
-
+/* 공통 새소식 */
+.news-date {
+  /* background: yellow; */
+  display: block;
+  text-align: right;
+}
 
 /* 작은 디바이스 스타일 */
 @media screen and (max-width: 319px) {
@@ -523,7 +588,7 @@ legend, .a11y-hidden {
   /* 2019. 08. 17 */
   /* 데스크탑 메인 컨텐츠 */
   .main {
-    background: yellow;
+    /* background: yellow; */
     display: grid;
     grid-template-columns: repeat(12, 65px);
     /* grid-template-rows: 300px 300px; */
@@ -544,7 +609,7 @@ legend, .a11y-hidden {
 
   /* 추천서적 */
   .recommend-book {
-    background: pink;
+    /* background: pink; */
     /* grid-column-start: 1;
     grid-column-end: 5; */
     /* grid-column: 1/5; */
@@ -554,7 +619,7 @@ legend, .a11y-hidden {
 
   /* 새소식 */
   .news {
-    background: lime;
+    /* background: lime; */
     /* grid-column-start: 5;
     grid-column-end: 13; */
     /* grid-column: 5/13; */
@@ -562,7 +627,7 @@ legend, .a11y-hidden {
     grid-area: news;
   }
   .board {
-    background: gray;
+    /* background: gray; */
     /* grid-column-start: 1;
     grid-column-end: 5; */
     /* grid-column: 1/5; */
@@ -571,7 +636,7 @@ legend, .a11y-hidden {
     
   }
   .favorite-site {
-    background: orange;
+    /* background: orange; */
     /* grid-column-start: 10;
     grid-column-end: 13; */
     /* grid-column: 10/13; */
@@ -579,7 +644,7 @@ legend, .a11y-hidden {
     grid-area : favorite;
   }
   .twitter {
-    background: skyblue;
+    /* background: skyblue; */
     /* grid-column-start: 5;
     grid-column-end: 10; */
     /* grid-row-start: 2;

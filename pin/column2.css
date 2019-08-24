@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+body {
+  margin: 0;
+  
+}
+
+
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  column-gap: 20px;
+}
+
+.card {
+
+  margin-bottom: 20px;
+}
+
+.card-thumbnail {
+  padding: 0;
+  margin: 0;
+  border: 1px solid #333;
+  padding: 20;
+} 
+
+
+@media screen and (max-width: 480px) {
+  .container {
+    columns: 1;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 800px){
+  .container {
+    columns: 2;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1200px){
+  .container {
+    columns: 3;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .container {
+    columns: 4;
+  }
+}
